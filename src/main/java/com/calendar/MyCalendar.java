@@ -15,7 +15,7 @@ import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
 @Repository
-public class MyCalendar { //extends Calendar
+public class MyCalendar {
 
 	
 	@Autowired
@@ -24,7 +24,7 @@ public class MyCalendar { //extends Calendar
 
 	@PostConstruct
 	public Calendar addDate() {
-		Calendar cal = new Calendar(4,"sunday",21,"August",2022);
+		Calendar cal = new Calendar(5,"Monday",22,"August",2022);
 		Calendar result = calRepo.save(cal);
 		return result;
 	}
